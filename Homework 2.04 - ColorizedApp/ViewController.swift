@@ -31,9 +31,9 @@ final class ViewController: UIViewController {
     
     private func updateColor() {
         
-        blueLabel.text = blueSlider.value.formatted()
-        greenLabel.text = greenSlider.value.formatted()
-        redLabel.text = redSlider.value.formatted()
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        redLabel.text = String(format: "%.2f", redSlider.value)
         
         colorizedView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
